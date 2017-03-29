@@ -1,0 +1,32 @@
+<h2>
+  LOGS!
+</h2>
+
+<h2>{{data}}</h2>
+
+<button (click)="getLogs()">GetLogs</button>
+
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>MemberId</th>
+      <th>FullName</th>
+      <th>ActionType</th>
+      <th>AuthType</th>
+      <th>ActionDate</th>
+      <th>LogDate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of logs">
+      <td>{{row.id}}</td>
+      <td>{{row.memberId}}</td>
+      <td>{{row.name}}</td>
+      <td>{{row.actionType}}</td>
+      <td>{{row.authType}}</td>
+      <td>{{row.actionDate}}</td>
+      <td>{{row.logDate}}</td>
+    </tr>
+  </tbody>
+</table>

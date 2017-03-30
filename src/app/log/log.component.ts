@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LogService } from './log.service';
+import { LogService } from '../services/log.service';
 
 
 @Component({
@@ -13,13 +13,13 @@ export class LogComponent implements OnInit {
   data = "asdas";
   logs;
 
-  constructor(private _logService: LogService) { }
+  constructor(private _service: LogService) { }
 
   ngOnInit() {
 
   }
 
   getLogs() {
-     this._logService.getMemberLogs().subscribe(c=>this.data=c.time);
+     this._service.getMemberLogs().subscribe(c=>this.data=c.time);
   }
 }

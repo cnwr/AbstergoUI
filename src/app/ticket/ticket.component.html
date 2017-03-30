@@ -1,0 +1,20 @@
+<h2>{{data}}</h2>
+
+<div class="well well-lg" *ngIf="!hasRecord">
+ <ul>
+  <li *ngFor="let model of qrModels">
+    {{ model.PerformanceName }}
+    <ul>
+      <li *ngFor="let ticket of model.Tickets">
+        <span>Koltuk : {{ ticket.SeatInfo }}</span>
+        <button (click)="navigateQr(ticket.Barcode)" class="btn btn-primary btn-xs">ShowQrCode</button>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+
+<div *ngIf="hasRecord" class="alert alert-dismissible alert-success"  [@enterAnimation]="show">
+ <img [src]="source" style="width:300px;height: 300px"/>
+ <p><button  (click)="goBack()" class="btn btn-info">Back</button></p>
+</div>

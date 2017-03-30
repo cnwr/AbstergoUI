@@ -5,6 +5,6 @@ export class UserModel {
         public lastName:string,
         public phone:string,
         public mail:string,
-        public birthDay:Date
+        public birthDay:string
         ){}
 }

@@ -5,17 +5,25 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { LogComponent } from './log/log.component';
 import { UserComponent } from './user/user.component';
+import { QrComponent } from './qr/qr.component';
+import { MenuComponent } from './menu/menu.component';
+import { CONST_ROUTING } from './app.routing';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogComponent,
-    UserComponent
+    UserComponent,
+    QrComponent,
+    MenuComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CONST_ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
